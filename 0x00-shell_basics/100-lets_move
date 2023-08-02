@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name '[A-Z]*' -exec mv {} /tmp/u/-name
+find . -maxdepth 1 -type f -name '[A-Z]*' > files.txt && xargs -a files.txt mv -t /tmp/u/
